@@ -60,6 +60,22 @@ export const HeroSection: React.FC = () => {
             </BrutalButton>
           </div>
 
+          <div className="flex flex-wrap items-center gap-2 pt-1 font-mono text-xs">
+            <span className="font-bold text-[#555555] uppercase">Recruiter Tools:</span>
+            <a
+              href="/project-audit"
+              className="border-[2px] border-[#0A0A0A] bg-[#FFE14D] px-2 py-0.5 font-bold uppercase shadow-[2px_2px_0px_#0A0A0A] hover:bg-[#FFFFFF] transition-colors"
+            >
+              Project Quality Audit ↗
+            </a>
+            <a
+              href="/problem-solving"
+              className="border-[2px] border-[#0A0A0A] bg-[#A855F7] text-white px-2 py-0.5 font-bold uppercase shadow-[2px_2px_0px_#0A0A0A] hover:bg-[#9333ea] transition-colors"
+            >
+              Problem-Solving Diagnostic ↗
+            </a>
+          </div>
+
           {/* Social Proof Metric Doodad */}
           <div className="pt-4 flex items-center gap-4 border-t-[2px] border-[#0A0A0A] max-w-lg">
             <div className="flex -space-x-2">

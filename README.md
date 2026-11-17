@@ -50,6 +50,14 @@ CareerPath was designed by hand to feel authentic, tactile, and distinctively hu
 - **Deterministic Rule-Based Fallback**: If `GEMINI_API_KEY` is not configured, a built-in deterministic advice engine steps in automatically with zero downtime.
 - **ATS Resume Scanner**: Audits resume text for high-impact verbs, quantifiable metrics, keyword density, and provides before-and-after bullet point rewrites.
 
+### 6. Portfolio & Project Quality Auditor (`/project-audit`)
+- **Recruiter Proof-of-Work Evaluation**: Audits projects across 5 dimensions: Architectural Complexity, Code Quality & TypeScript Strictness, Originality vs. Tutorial Clones, Documentation Rigor, and Real-World Deployment.
+- Generates an instant Project Quality Score (0-100) and actionable recruiter teardown with critical fixes and architecture enhancements.
+
+### 7. Problem-Solving & Analytical Thinking Diagnostic (`/problem-solving`)
+- **Reasoning & Debugging Diagnostic**: Tests engineering intuition on algorithmic pattern recognition (e.g. Sliding Window, Topological Sort), production debugging (e.g. async TOCTOU race conditions, SQL N+1 bottlenecks), and system trade-offs.
+- Produces a Problem-Solving Index, maps cognitive blind spots, and generates a personalized 14-Pattern Mastery Roadmap.
+
 ---
 
 ## 🛠️ Technology Stack
@@ -77,6 +85,8 @@ CareerPath was designed by hand to feel authentic, tactile, and distinctively hu
 | `POST` | `/api/mentor` | AI mentor guidance via Gemini API with deterministic fallback |
 | `POST` | `/api/resume/ats` | ATS scoring, keyword match, and bullet upgrade suggestions |
 | `GET` | `/api/readiness` | Returns overview metrics (streak, modules completed, readiness) |
+| `POST` | `/api/project-audit` | Audits project complexity, code quality, originality, docs & deployment |
+| `GET / POST` | `/api/problem-solving` | Diagnostic scenario questions & multi-pillar reasoning evaluation |
 
 ---
 
