@@ -216,7 +216,7 @@ export default function ProjectAuditPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             {/* Input Form Column (7 cols) */}
             <div className="lg:col-span-7 space-y-6">
-              <BrutalCard bg="surface" shadow="md">
+              <BrutalCard color="white" shadowSize="md" className="p-6">
                 <form onSubmit={runAudit} className="space-y-6">
                   {/* Project Name & Target Role */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -502,7 +502,7 @@ export default function ProjectAuditPage() {
               {auditResult ? (
                 <>
                   {/* Scorecard Hero */}
-                  <BrutalCard bg="surface" shadow="lg" className="border-t-[6px] border-t-[#0A0A0A]">
+                  <BrutalCard color="white" shadowSize="lg" className="border-t-[6px] border-t-[#0A0A0A] p-6">
                     <div className="flex items-center justify-between border-b-[2px] border-[#0A0A0A] pb-3 mb-4">
                       <div>
                         <span className="font-mono text-xs font-bold uppercase text-[#555555]">
@@ -512,18 +512,11 @@ export default function ProjectAuditPage() {
                           {projectName}
                         </h3>
                       </div>
-                      <div className="w-20 h-20">
+                      <div>
                         <Gauge
                           score={auditResult.overallScore}
-                          size="md"
+                          size={160}
                           label="SCORE"
-                          color={
-                            auditResult.overallScore >= 80
-                              ? "#10B981"
-                              : auditResult.overallScore >= 55
-                              ? "#FFE14D"
-                              : "#FF5CAA"
-                          }
                         />
                       </div>
                     </div>
@@ -589,7 +582,7 @@ export default function ProjectAuditPage() {
                   </BrutalCard>
 
                   {/* Recruiter Teardown Card */}
-                  <BrutalCard bg="surface" shadow="md">
+                  <BrutalCard color="white" shadowSize="md" className="p-6">
                     <div className="flex items-center gap-2 mb-3">
                       <Sticker color="pink" rotate="-1" size="sm">
                         RECRUITER TEARDOWN
@@ -626,7 +619,7 @@ export default function ProjectAuditPage() {
                 </>
               ) : (
                 /* Empty Placeholder State */
-                <BrutalCard bg="surface" shadow="md" className="p-8 text-center">
+                <BrutalCard color="white" shadowSize="md" className="p-8 text-center">
                   <div className="w-14 h-14 border-[3px] border-[#0A0A0A] bg-[#FFE14D] flex items-center justify-center mx-auto mb-4 shadow-[3px_3px_0px_#0A0A0A]">
                     <Layers className="w-7 h-7 text-[#0A0A0A]" />
                   </div>

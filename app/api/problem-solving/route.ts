@@ -4,7 +4,7 @@ import { z } from "zod";
 
 const evaluationSchema = z.object({
   targetRole: z.string().default("full-stack"),
-  answers: z.record(z.string()).default({}),
+  answers: z.record(z.string(), z.string()).default({}),
 });
 
 export async function GET() {

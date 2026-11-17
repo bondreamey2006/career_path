@@ -19,6 +19,7 @@ import {
   ProblemSolvingQuestion,
   ProblemSolvingEvaluationRequest,
   ProblemSolvingEvaluationResponse,
+  PatternMasteryItem,
 } from "@/types";
 import { CAREER_ROLES } from "@/data/roles";
 import { ROLE_ROADMAPS } from "@/data/roadmaps";

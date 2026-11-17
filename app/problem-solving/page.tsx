@@ -184,7 +184,7 @@ export default function ProblemSolvingPage() {
                 const explanationData = evaluation?.explanations?.[q.id];
 
                 return (
-                  <BrutalCard key={q.id} bg="surface" shadow="md">
+                  <BrutalCard key={q.id} color="white" shadowSize="md" className="p-6">
                     {/* Question Header */}
                     <div className="flex items-start justify-between gap-3 border-b-[2px] border-[#0A0A0A] pb-3 mb-3">
                       <div>
@@ -297,7 +297,7 @@ export default function ProblemSolvingPage() {
               <div className="sticky bottom-6 z-20">
                 <BrutalButton
                   type="button"
-                  variant="violet"
+                  variant="primary"
                   size="lg"
                   onClick={() => handleSubmitEvaluation()}
                   disabled={loading}
@@ -313,7 +313,7 @@ export default function ProblemSolvingPage() {
               {evaluation ? (
                 <>
                   {/* Hero Scorecard */}
-                  <BrutalCard bg="surface" shadow="lg" className="border-t-[6px] border-t-[#0A0A0A]">
+                  <BrutalCard color="white" shadowSize="lg" className="border-t-[6px] border-t-[#0A0A0A] p-6">
                     <div className="flex items-center justify-between border-b-[2px] border-[#0A0A0A] pb-3 mb-4">
                       <div>
                         <span className="font-mono text-xs font-bold uppercase text-[#555555]">
@@ -323,18 +323,11 @@ export default function ProblemSolvingPage() {
                           Analytical Scorecard
                         </h3>
                       </div>
-                      <div className="w-20 h-20">
+                      <div>
                         <Gauge
                           score={evaluation.overallScore}
-                          size="md"
+                          size={160}
                           label="INDEX"
-                          color={
-                            evaluation.overallScore >= 80
-                              ? "#10B981"
-                              : evaluation.overallScore >= 55
-                              ? "#FFE14D"
-                              : "#FF5CAA"
-                          }
                         />
                       </div>
                     </div>
@@ -397,7 +390,7 @@ export default function ProblemSolvingPage() {
                   </BrutalCard>
 
                   {/* Blind Spots & Cognitive Deficiencies */}
-                  <BrutalCard bg="surface" shadow="md">
+                  <BrutalCard color="white" shadowSize="md" className="p-6">
                     <div className="flex items-center gap-2 mb-3">
                       <Sticker color="pink" rotate="-1" size="sm">
                         COGNITIVE BLIND SPOTS
@@ -431,7 +424,7 @@ export default function ProblemSolvingPage() {
                   </BrutalCard>
 
                   {/* 14-Pattern Roadmap Status */}
-                  <BrutalCard bg="surface" shadow="md">
+                  <BrutalCard color="white" shadowSize="md" className="p-6">
                     <div className="flex items-center justify-between border-b-[2px] border-[#0A0A0A] pb-2 mb-3">
                       <h4 className="font-heading text-xs font-extrabold uppercase tracking-wider text-[#0A0A0A]">
                         14-Pattern Mastery Roadmap
@@ -471,7 +464,7 @@ export default function ProblemSolvingPage() {
                 </>
               ) : (
                 /* Empty / Ready State */
-                <BrutalCard bg="surface" shadow="md" className="p-8 text-center">
+                <BrutalCard color="white" shadowSize="md" className="p-8 text-center">
                   <div className="w-14 h-14 border-[3px] border-[#0A0A0A] bg-[#A855F7] text-white flex items-center justify-center mx-auto mb-4 shadow-[3px_3px_0px_#0A0A0A]">
                     <Brain className="w-7 h-7" />
                   </div>
@@ -484,7 +477,7 @@ export default function ProblemSolvingPage() {
                   </p>
                   <BrutalButton
                     type="button"
-                    variant="violet"
+                    variant="primary"
                     size="md"
                     onClick={() => handleSubmitEvaluation()}
                     className="w-full justify-center"
