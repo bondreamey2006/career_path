@@ -28,7 +28,7 @@ export const BentoSection: React.FC = () => {
               ZERO FLUFF ARCHITECTURE
             </span>
             <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0A0A0A]">
-              THE 5 RECOVERY ENGINES
+              THE RECOVERY & PLACEMENT ENGINES
             </h2>
           </div>
           <p className="font-sans text-base text-[#222222] max-w-md font-medium">
@@ -276,6 +276,78 @@ export const BentoSection: React.FC = () => {
                 </div>
                 <div className="font-mono text-[11px] text-[#A855F7] font-bold">
                   Click to scan full resume text →
+                </div>
+              </div>
+            </div>
+          </BentoCard>
+        </SlideReveal>
+
+        {/* CARD 06: Portfolio & Project Quality (Col span 6) */}
+        <SlideReveal direction="left" delay={0.35} className="md:col-span-6">
+          <BentoCard
+            numberLabel="06"
+            tag="FEATURE #3 • RECRUITER AUDIT"
+            title="Portfolio & Project Quality Evaluator"
+            description="Evaluates project complexity, code quality, originality, documentation, and real-world implementation. Weed out tutorial clone markers before recruiters filter you out."
+            ctaLink="/project-audit"
+            ctaText="AUDIT YOUR GITHUB PROJECT"
+            bgColor="bg-[#FFFFFF]"
+          >
+            <div className="border-[2px] border-[#0A0A0A] bg-[#F4F0E6] p-3 space-y-2.5">
+              <div className="flex items-center justify-between text-xs font-mono font-bold">
+                <span className="text-[#0A0A0A]">5-PILLAR EVALUATION:</span>
+                <span className="border-[1.5px] border-[#0A0A0A] bg-[#FFE14D] px-2 py-0.5 text-[10px]">
+                  RECRUITER READY
+                </span>
+              </div>
+              <div className="grid grid-cols-2 gap-2 text-[11px] font-mono">
+                <div className="p-1.5 border-[1.5px] border-[#0A0A0A] bg-[#FFFFFF]">
+                  ⚡ Architectural Complexity
+                </div>
+                <div className="p-1.5 border-[1.5px] border-[#0A0A0A] bg-[#FFFFFF]">
+                  🛡️ Strict TypeScript & Tests
+                </div>
+                <div className="p-1.5 border-[1.5px] border-[#0A0A0A] bg-[#FFFFFF]">
+                  💎 Original Problem Solver
+                </div>
+                <div className="p-1.5 border-[1.5px] border-[#0A0A0A] bg-[#FFFFFF]">
+                  🌐 Live Production CI/CD
+                </div>
+              </div>
+            </div>
+          </BentoCard>
+        </SlideReveal>
+
+        {/* CARD 07: Problem-Solving & Analytical Thinking (Col span 6) */}
+        <SlideReveal direction="right" delay={0.4} className="md:col-span-6">
+          <BentoCard
+            numberLabel="07"
+            tag="FEATURE #2 • REASONING RIGOR"
+            title="Problem-Solving & Analytical Thinking"
+            description="Evaluates logical reasoning, algorithmic thinking, debugging, and decision-making abilities. Test your instincts on race conditions, N+1 bottlenecks, and the 14 core patterns."
+            ctaLink="/problem-solving"
+            ctaText="TAKE ANALYTICAL DIAGNOSTIC"
+            bgColor="bg-[#FFFFFF]"
+          >
+            <div className="border-[2px] border-[#0A0A0A] bg-[#F4F0E6] p-3 space-y-2.5">
+              <div className="flex items-center justify-between text-xs font-mono font-bold">
+                <span className="text-[#0A0A0A]">DIAGNOSTIC SUITE:</span>
+                <span className="border-[1.5px] border-[#0A0A0A] bg-[#A855F7] text-white px-2 py-0.5 text-[10px]">
+                  14 PATTERNS
+                </span>
+              </div>
+              <div className="grid grid-cols-2 gap-2 text-[11px] font-mono">
+                <div className="p-1.5 border-[1.5px] border-[#0A0A0A] bg-[#FFFFFF]">
+                  🧠 Sliding Window & DFS/BFS
+                </div>
+                <div className="p-1.5 border-[1.5px] border-[#0A0A0A] bg-[#FFFFFF]">
+                  🐞 Async TOCTOU Concurrency
+                </div>
+                <div className="p-1.5 border-[1.5px] border-[#0A0A0A] bg-[#FFFFFF]">
+                  ⚡ Redis Cache Stampede
+                </div>
+                <div className="p-1.5 border-[1.5px] border-[#0A0A0A] bg-[#FFFFFF]">
+                  🎯 Cognitive Blind Spot Map
                 </div>
               </div>
             </div>

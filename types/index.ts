@@ -203,3 +203,94 @@ export interface ReadinessOverview {
   targetRoleTitle: string;
   backlogStatus: string;
 }
+
+// ==========================================
+// FEATURE 1: PORTFOLIO & PROJECT QUALITY TYPES
+// ==========================================
+
+export interface ProjectAuditRequest {
+  projectName: string;
+  targetRole: string;
+  repoUrl?: string;
+  liveUrl?: string;
+  description: string;
+  complexityMarkers: string[];
+  codeQualityMarkers: string[];
+  originalityTier: "tutorial-clone" | "modified-tutorial" | "bespoke-solution";
+  documentationLevel: "minimal-readme" | "standard-readme" | "deep-architecture-docs";
+  deploymentStatus: "not-deployed" | "free-tier-live" | "production-ci-cd-custom-domain";
+}
+
+export interface ProjectAuditDimension {
+  name: string;
+  score: number; // 0 to 100
+  weight: number;
+  verdict: string;
+  feedback: string[];
+  upgradeActions: string[];
+}
+
+export interface ProjectAuditResponse {
+  overallScore: number; // 0 to 100
+  tier: "TUTORIAL CLONE (HIGH RISK)" | "EMERGING JUNIOR" | "PRODUCTION-GRADE (INTERVIEW MAGNET)";
+  summary: string;
+  dimensions: {
+    complexity: ProjectAuditDimension;
+    codeQuality: ProjectAuditDimension;
+    originality: ProjectAuditDimension;
+    documentation: ProjectAuditDimension;
+    realWorldImplementation: ProjectAuditDimension;
+  };
+  recruiterTeardown: string;
+  criticalFixes: string[];
+  suggestedArchitectureUpgrades: string[];
+}
+
+// ==========================================
+// FEATURE 2: PROBLEM-SOLVING & ANALYTICAL THINKING TYPES
+// ==========================================
+
+export interface ProblemSolvingOption {
+  id: string;
+  text: string;
+  isCorrect: boolean;
+  explanation: string;
+}
+
+export interface ProblemSolvingQuestion {
+  id: string;
+  dimension: "algorithmic" | "debugging" | "decision-making";
+  dimensionTitle: string;
+  title: string;
+  scenario: string;
+  codeSnippet?: string;
+  difficulty: "CORE" | "CRITICAL" | "ADVANCED";
+  options: ProblemSolvingOption[];
+}
+
+export interface ProblemSolvingEvaluationRequest {
+  targetRole: string;
+  answers: Record<string, string>; // questionId -> optionId
+}
+
+export interface PatternMasteryItem {
+  pattern: string;
+  status: "MASTERED" | "NEEDS_PRACTICE" | "CRITICAL_GAP";
+  targetCount: number;
+  rationale: string;
+}
+
+export interface ProblemSolvingEvaluationResponse {
+  overallScore: number;
+  tier: "FOUNDATIONAL" | "COMPETENT" | "EXEMPLARY / INTERVIEW-READY";
+  algorithmicScore: number;
+  debuggingScore: number;
+  decisionMakingScore: number;
+  totalQuestions: number;
+  correctCount: number;
+  blindSpots: string[];
+  patternMasteryRoadmap: PatternMasteryItem[];
+  tacticalPlaybook: string[];
+  explanations: Record<string, { isCorrect: boolean; explanation: string; correctOptionId: string }>;
+}
+

@@ -27,13 +27,13 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { label: "Features", href: "/#features" },
-    { label: "Career Roadmaps", href: "/roadmaps" },
+    { label: "Roadmaps", href: "/roadmaps" },
     { label: "Skill Gap", href: "/skill-gap" },
-    { label: "What-If Simulator", href: "/simulator" },
-    { label: "Recovery Module", href: "/recovery" },
-    { label: "AI Mentor & ATS", href: "/mentor" },
-    { label: "Pricing", href: "/#pricing" },
+    { label: "Project Audit", href: "/project-audit" },
+    { label: "Problem Solving", href: "/problem-solving" },
+    { label: "Simulator", href: "/simulator" },
+    { label: "Recovery", href: "/recovery" },
+    { label: "AI Mentor", href: "/mentor" },
   ];
 
   return (
